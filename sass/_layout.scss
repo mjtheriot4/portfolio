@@ -1,0 +1,167 @@
+// PHONE STYLES::
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+
+}
+p,h1,h2,h3,h4,h5,li{
+  color: white;
+}
+header{
+  //FLEX BOX CENTERING!
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // display: block;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  // background-image: url("https://placeimg.com/1000/480/any");
+  background-position: center center;
+  background-size: cover;
+}
+nav{
+  display: block;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+  ul{
+    text-align: center;
+    li{
+      display: inline-block;
+      width: 70%;
+      padding: 0 2em;
+      img{
+        max-width: 200px;
+        transition: all ease-out .2s;
+      }
+    }
+    li:last-of-type{
+      margin-bottom: 3em;
+    }
+  }
+}
+div#bug{
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  top: 30px;
+  right: 30px;
+  background-color: $half;
+  z-index: 3;
+  cursor: pointer;
+  transition: all ease-out .2s;
+  &.open {
+    background-color: black;
+    border-radius: 50%;
+    transition: all ease-out .2s;
+  }
+}
+aside{
+  position:fixed;
+  height: 100%;
+  width: 80%;
+  top: 0; right: -80%;
+  z-index: 2;
+  background-color: grey;
+  transition: all ease-in-out .4s;
+  &.open{
+    right: 0;
+    transition: all ease-in-out .4s;
+  }
+}
+section{
+  width: 100%;
+  position: relative;
+  min-height: 100px;
+  overflow: hidden;
+  padding-bottom:2em;
+  // background-color: $faded;
+  &#game{
+    position: absolute;
+    top: 0; left: 0;
+    background-color: $faded;
+    height: 100%;
+    margin: 0;
+    z-index: 1;
+  }
+  h2.faded{
+    line-height: 1;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+  }
+  h2.main{
+    padding-top: .5em;
+    padding-left: 7.5%;
+  }
+  div.gallery{
+    width: 100%;
+    padding: 2em 2.5%;
+    clear:both;
+    article{
+      padding: 0 5%;
+      width:100%;
+      transition: all ease-out .2s;
+      img{
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        clear: both;
+      }
+      h3{
+        float:left;
+        padding-top: .1em;
+        padding-bottom: .2em;
+        overflow: hidden;
+      }
+      i{
+        float:right;
+        padding-top: .35em;
+        padding-bottom: .2em;
+        overflow: hidden;
+      }
+      p{
+        margin-bottom: 2em;
+        padding-top: .5em;
+        color: $dimmed;
+        clear: both;
+      }
+    }
+  }
+}
+footer{
+  min-height: 2.5em;
+}
+p.heightOverride{
+  height:3em !important;
+}
+// TABLET STYLES::
+@media only screen and (min-width: 768px) {
+  nav ul li img{
+    max-width: 400px;
+    transition: all ease-out .2s;
+  }
+  section{
+    div.gallery{
+      article{
+        width: 50%;
+        padding: 0 2.5%;
+        transition: all ease-out .2s;
+        float:left;
+      }
+    }
+  }
+}
+
+// DESKTOP STYLES::
+@media only screen and (min-width: 992px) {
+
+}
+// LARGE DESKTOP STYLES::
+@media only screen and (min-width: 1200px) {
+
+}

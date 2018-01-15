@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,300|Roboto+Slab:300,400|Alfa+Slab+One');
+
+$titleFont: 'Roboto Slab', serif;
+$bodyFont: 'Raleway', sans-serif;
+$slabFont: 'Alfa Slab One', serif;
+
+nav ul li{
+  list-style: none;
+  a{
+    font-family: $bodyFont;
+    font-weight: 400;
+    font-size: 1.6em;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    &:hover{
+      opacity: .6;
+      transition: all .1s;
+    }
+    &.no-hover:hover{
+      opacity: 1;
+    }
+  }
+}
+h2.faded{
+  color: $faded;
+  font-family: $slabFont;
+  text-transform: uppercase;
+  font-size: 10em;
+}
+h2.main{
+  color: $half;
+  font-family: $titleFont;
+  text-transform: capitalize;
+  font-size: 2em;
+  transition: all ease-out .4s;
+}
+h3{
+  font-size: 1.1em;
+  font-family: $bodyFont;
+  font-weight: 300;
+  transition: all ease-out .4s;
+}
+i{
+  color: $half;
+  font-size: 1.2em !important;
+  cursor: pointer;
+  transition: color ease-in-out .1s;
+  &:hover{
+    color: white;
+    transition: color ease-in-out .2s;
+  }
+  &::selection {
+    background: black; /* WebKit/Blink Browsers */
+  }
+  &::-moz-selection {
+    background: black; /* Gecko Browsers */
+  }
+}
+article p{
+  font-size: 1em;
+  font-family: $bodyFont;
+  font-weight: 400;
+  border-top: 1px solid $dimmed;
+  max-height: 0;
+  opacity: 0;
+  transition: all ease-in-out .5s;
+  &.reveal {
+    opacity: 1;
+    max-height: 15em;
+    transition: all ease-in-out .5s;
+  }
+}
+footer, section{
+  font-family: $bodyFont;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.4;
+  text-decoration: none;
+}
+// TABLET STYLES::
+@media only screen and (min-width: 768px) {
+  h2.main{
+    font-size: 3em;
+    transition: all ease-out .4s;
+  }
+  h3, i{
+    font-size: 1.4em !important;
+    transition: all ease-out .4s;
+  }
+  nav ul li a{
+    font-size: 2em;
+    transition: all ease-out .4s;
+  }
+  p.reveal {
+    max-height: 10em;
+    transition: all ease-in-out .5s;
+  }
+}
+// DESKTOP STYLES::
+@media only screen and (min-width: 992px) {
+
+}
+// LARGE DESKTOP STYLES::
+@media only screen and (min-width: 1200px) {
+
+}
