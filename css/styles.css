@@ -74,6 +74,16 @@ footer, section {
   line-height: 1.4;
   text-decoration: none; }
 
+a.web {
+  font-weight: bold;
+  color: #E18A07 !important;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  animation: all .1s; }
+  a.web:hover {
+    color: white !important;
+    animation: all .1s; }
+
 @media only screen and (min-width: 768px) {
   h2.main {
     font-size: 3em;
@@ -84,8 +94,13 @@ footer, section {
   nav ul li a {
     font-size: 2em;
     transition: all ease-out .4s; }
-  p.reveal {
-    max-height: 10em;
+  article p.reveal {
+    max-height: 14em;
+    transition: all ease-in-out .5s; } }
+
+@media only screen and (min-width: 992px) {
+  article p.reveal {
+    max-height: 20em;
     transition: all ease-in-out .5s; } }
 
 html, body {

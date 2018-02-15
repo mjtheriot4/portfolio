@@ -3,6 +3,7 @@
 $titleFont: 'Roboto Slab', serif;
 $bodyFont: 'Raleway', sans-serif;
 $slabFont: 'Alfa Slab One', serif;
+$orange: #E18A07;
 
 nav ul li{
   list-style: none;
@@ -79,6 +80,17 @@ footer, section{
   line-height: 1.4;
   text-decoration: none;
 }
+a.web{
+  font-weight:bold;
+  color:$orange !important;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  animation: all .1s;
+  &:hover{
+    color:white !important;
+    animation: all .1s;
+  }
+}
 // TABLET STYLES::
 @media only screen and (min-width: 768px) {
   h2.main{
@@ -93,13 +105,17 @@ footer, section{
     font-size: 2em;
     transition: all ease-out .4s;
   }
-  p.reveal {
-    max-height: 10em;
+  article p.reveal {
+    max-height: 14em;
     transition: all ease-in-out .5s;
   }
 }
 // DESKTOP STYLES::
 @media only screen and (min-width: 992px) {
+  article p.reveal {
+    max-height: 20em;
+    transition: all ease-in-out .5s;
+  }
 
 }
 // LARGE DESKTOP STYLES::
