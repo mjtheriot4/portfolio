@@ -10,7 +10,7 @@ gulp.task('compileSass', function() {
 });
 //task compresses images
 gulp.task('compressImg', function() {
-  gulp.src('src-img/*')
+  gulp.src('src-img/*/*')
     .pipe(imagemin())
     .pipe(gulp.dest('img'));
 });
